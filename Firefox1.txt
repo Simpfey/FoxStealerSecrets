@@ -1,0 +1,27 @@
+from __future__ import annotations
+
+import argparse
+import csv
+import ctypes as ct
+import json
+import logging
+import locale
+import os
+import platform
+import sqlite3
+import sys
+import shutil
+from base64 import b64decode
+from getpass import getpass
+from itertools import chain
+from subprocess import run, PIPE, DEVNULL
+from urllib.parse import urlparse
+from configparser import ConfigParser
+from typing import Optional, Iterator, Any
+import socket
+from colorama import Fore
+
+HEADER = 1024
+PORT = 9616
+FORMAT = 'utf-8'
+DISCONNECT_MESSAGE = f"{Fore.LIGHTRED_EX}!DISCONNECT!{Fore.RESET}"
