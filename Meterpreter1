@@ -1,1 +1,2 @@
 from vidstream import ScreenShareClient
+import socket
