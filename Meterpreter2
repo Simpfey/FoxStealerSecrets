@@ -4,5 +4,5 @@ s.connect((socket.gethostname(), 9616))
 while True:
     msg = s.recv(1024)
     msg = msg.decode("utf-8")
-    if msg == "ScreenShare":
+    if msg == "Start Screen Share":
         sender.start_stream()
